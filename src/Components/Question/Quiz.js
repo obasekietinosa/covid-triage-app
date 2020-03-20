@@ -94,12 +94,6 @@ export default class Quiz extends Component {
   }
 
   startQuiz = () => {
-    if (!this.state.termsAccepted) {
-      this.setState({
-        error: "Please accept the terms to continue"
-      })
-      return
-    }
     this.setState({ currentQuestion: 0 })
   }
 
@@ -109,6 +103,7 @@ export default class Quiz extends Component {
 
   endGame = () => {
     this.calculateScore()
+    this.persistResults()
     this.setState({ endQuiz: true })
   }
 
@@ -125,6 +120,23 @@ export default class Quiz extends Component {
     
     console.log(score)
     this.setState({ score })
+  }
+
+  persistResults = () => {
+      fetch("https://covid19-triage.firebaseio.com/results.json", {
+        method: 'POST'
+      })
+      fetch("https://covid19-triage.firebaseio.com/results.json", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                answers: this.state.answers
+            })
+      })
+        .then(console.log("Saved"))
   }
 
   selectOption = (question, answer) => {
@@ -149,20 +161,8 @@ export default class Quiz extends Component {
               <div className="form-group text-center col-md-6 offset-md-3">
                 <h3 className="col-sm-12">Before we begin...</h3>
                 <p>
-                    This app will determine your COVID-19 risk factor.
+                    This app will determine your COVID-19 risk factor and if you need to call the Disease Control Hotline or not.
                 </p>
-              </div>
-
-              <div className="form-group text-center col-md-6 offset-md-3 checkbox">
-                <label htmlFor="acceptTerms">
-                  <input
-                    id="acceptTerms"
-                    type="checkbox"
-                    onClick={this.acceptTerms}
-                    defaultChecked={this.state.termsAccepted}
-                  />
-                  &nbsp;Please accept the terms and conditions outlined.
-                </label>
               </div>
               <div className="col-12 text-center">
                 {this.state.button}
@@ -175,8 +175,10 @@ export default class Quiz extends Component {
                 return (
                   <Question key={questionKey} show={this.isCurrentQuestion(questionKey)}>
                     <div className="col-md-8 offset-md-2 text-center">
-                      <h3 className="col-sm-12">
-                        {question.text}
+                      <h3 
+                         className="col-sm-12"
+                        dangerouslySetInnerHTML={{ __html: question.text }}
+                      >
                       </h3>
                       {
                         question.options.map((option, optionKey) => {
