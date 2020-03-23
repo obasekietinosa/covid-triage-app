@@ -1,9 +1,16 @@
 import React from 'react'
 
-export default function Loading() {
+var content = {
+    'loading': {
+        'en': "Please wait…",
+        'fr': "Encore un peu de patience…"
+    }
+}
+
+export default function Loading(props) {
     return (
         <div className="text-center">
-            Please wait…
+            {content.loading[props.lang]}
         </div>
     )
 }

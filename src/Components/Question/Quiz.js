@@ -12,31 +12,44 @@ export default class Quiz extends Component {
       currentQuestion: "intro",
       error: "",
       totalQuestions: 8,
-      userName: "",
-      email: "",
-      termsAccepted: false,
       answers: [],
       score: 0,
       selected: [],
+      lang:"fr",
       endQuiz: false,
       alreadyQuizzed: false,
-      button: <button onClick={this.startQuiz} className="btn btn-secondary waves-effect waves-light">Get Started <i className="fas fa-arrow-right"></i></button>,
       questionsLoaded: false,
       questions: [
         {
           text: "Dummy Question?",
+          text_lang: {
+              'en': "Dummy Question",
+              'fr': "Dummy Question"
+          },
           options: [
             {
               value: 1,
-              text: "A Dummy Option"
+              text: "A Dummy Option",
+              text_lang: {
+                'en': "Dummy Question",
+                'fr': "Dummy Question"
+              }
             },
             {
               value: 0,
-              text: "Another Dummy Option"
+              text: "Another Dummy Option",
+              text_lang: {
+                'en': "Dummy Question",
+                'fr': "Dummy Question"
+              }
             },
             {
               value: 0,
-              text: "Yet Another Dummy Option"
+              text: "Yet Another Dummy Option",
+              text_lang: {
+                'en': "Dummy Question",
+                'fr': "Dummy Question"
+              }
             }
           ]
         }
@@ -64,29 +77,6 @@ export default class Quiz extends Component {
           this.setState({ error })
         })
       return
-  }
-
-  setUserName = (e) => {
-    let userName = e.target.value
-    if (userName.length) {
-      this.setState({
-        userName
-      })
-    }
-  }
-
-  setEmail = (e) => {
-    let email = e.target.value
-    if (email.length) {
-      this.setState({
-        email
-      })
-    }
-  }
-
-  acceptTerms = (e) => {
-    let termsAccepted = !this.state.termsAccepted
-    this.setState({ termsAccepted })
   }
 
   isCurrentQuestion = (question) => {
@@ -151,6 +141,21 @@ export default class Quiz extends Component {
 
   scrollToMyRef = () => window.scrollTo(0, this.myRef.current.offsetTop)
 
+  content = {
+      'preheader': {
+          'en': "Before we begin...",
+          'fr': "Avant de commencer..."
+      },
+      'intro': {
+          'en': "This app will determine your COVID-19 risk factor and if you need to call the Disease Control Hotline or not.",
+          'fr': "Cet outil évalue votre risque d'exposition à COVID 19 et si vous devez appeler la hotline de contrôle des maladies ou non"
+      },
+      'startBtn': {
+          'en': "Get Started",
+          'fr': "Commencer"
+      }
+  }
+
   render() {
     const quiz = <section id="hero" ref={this.myRef}>
       <div className="container">
@@ -159,13 +164,15 @@ export default class Quiz extends Component {
 
             <Question show={this.isCurrentQuestion("intro")}>
               <div className="form-group text-center col-md-6 offset-md-3">
-                <h3 className="col-sm-12">Before we begin...</h3>
+                <h3 className="col-sm-12">{ this.content.preheader[this.state.lang] }</h3>
                 <p>
-                    This app will determine your COVID-19 risk factor and if you need to call the Disease Control Hotline or not.
+                    { this.content.intro[this.state.lang] }
                 </p>
               </div>
               <div className="col-12 text-center">
-                {this.state.button}
+                <button onClick={this.startQuiz} className="btn btn-secondary waves-effect waves-light">
+                    { this.content.startBtn[this.state.lang] } <i className="fas fa-arrow-right"></i>
+                </button>
                 <p className="error mt-3">{this.state.error}</p>
               </div>
             </Question>
@@ -177,7 +184,7 @@ export default class Quiz extends Component {
                     <div className="col-md-8 offset-md-2 text-center">
                       <h3 
                          className="col-sm-12"
-                        dangerouslySetInnerHTML={{ __html: question.text }}
+                        dangerouslySetInnerHTML={{ __html: question.text_lang[this.state.lang] }}
                       >
                       </h3>
                       {
@@ -190,7 +197,7 @@ export default class Quiz extends Component {
                               onClick={this.selectOption}
                               question={questionKey}
                               answer={option.value}
-                              value={option.text}
+                              value={option.text_lang[this.state.lang]}
                             />
                           )
                         })
@@ -211,9 +218,9 @@ export default class Quiz extends Component {
       <div>
         {
             this.state.endQuiz ?
-              <Results score={this.state.score} name={this.state.userName} />
+              <Results score={this.state.score} lang={this.state.lang} />
               :
-              this.state.questionsLoaded ? quiz : <Loading />
+              this.state.questionsLoaded ? quiz : <Loading lang={this.state.lang} />
         }
       </div>
     )
