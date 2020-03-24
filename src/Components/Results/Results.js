@@ -61,9 +61,12 @@ export default class Results extends Component {
                         For further information: ask more questions on Wellvis or chat a doctor on Wellvis 
                         by clicking <a href="https://app.wellvis.org/#/chat/find" target="_blank" rel="noopener noreferrer"><b>here</b></a>
                     <p>
+                   <p>
+                        <b>Please note</b> that a sudden loss of your sense of smell or taste could be a sign that you are carrying the #COVIDー19 virus.
+                   </p>
                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="btn btn-primary">Frequently Asked Questions</a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/103/covid-19-prevention-advice" class="btn btn-primary">Prevention Tips</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="my-2 btn btn-primary">Frequently Asked Questions</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/103/covid-19-prevention-advice" class="my-2 btn btn-primary">Prevention Tips</a>
                     </p>
                 `,
                 'fr': `
@@ -76,8 +79,8 @@ export default class Results extends Component {
                         target="_blank" rel="noopener noreferrer"><b>Wellvis en cliquant ici</b></a>
                     <p>
                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="btn btn-primary">Frequently Asked Questions</a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/105/conseils-de-prevention" class="btn btn-primary">Conseils de prevention</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="my-2 btn btn-primary">Frequently Asked Questions</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/105/conseils-de-prevention" class="my-2 btn btn-primary">Conseils de prevention</a>
                     </p>
                 `
             },
@@ -96,49 +99,116 @@ export default class Results extends Component {
                 'en': `
                     <p>Kindly watch yourself carefully and if you have difficulty in breathing please call the appropriate number</p>
                     <p>
-                        For Nigeria: 08000CORONA 08023169485, 08033565529, 08052817243
+                        Nigeria: 0800 970000 10    
                     </p>
                     <p>
-                        For Ghana: +233 55 843 9868 / +233 50 949 7700
+                        Lagos:  08023169485, 08033565529, 08052817243
                     </p>
                     <p>
-                        For Kenya: 0729 471414 and 0732 353535
+                        Ghana: +233 55 843 9868 / +233 50 949 7700
                     </p>
                     <p>
-                        For Gambia: 1025
+                        Kenya: 0729 471414 and 0732 353535.
                     </p>
                     <p>
-                        For Cameroon: 1510
+                        Gambia: 1025
                     </p>
+                    <p>
+                        Cameroon: 1510
+                    </p>
+                    <p>
+                        Carbo Verde: +238 800 1112
+                    </p>
+                    <p>
+                        Burkina Faso +226 160 8989 / +226 521 95394
+                    </p>
+                    <p>
+                        Benin: +229 953 61102 / +229 953 61102
+                    </p>
+                    <p>
+                        Cote d'ivoire: 114 / 143 / 101
+                    </p>
+                    <p>
+                        Mali: 30601
+                    </p>
+                    <p>
+                        Senegal: +221 800005050
+                    </p>
+                    <p>
+                        Sierra Leone: 117
+                    </p>
+                    <p>
+                        Togo: +228 22222073 / +228 91674242
+                    </p>
+                    <p>
+                        Guinea: +224 629995656
+                    </p>
+                    <p>
+                        Guine-Bissau: 1919 (MTN) / 2020 (orange) / +245 966050002 (COES)
+                    </p>
+
+                   <p>
+                        <b>Please note</b> that a sudden loss of your sense of smell or taste could be a sign that you are carrying the #COVIDー19 virus.
+                   </p>
 
                     <p>You can get in touch and chat with a doctor on <a href="https://app.wellvis.org/#/chat/find" target="_blank" rel="noopener noreferrer"><b>Wellvis</b></a></p>
                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="btn btn-primary">Frequently Asked Questions</a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/103/covid-19-prevention-advice" class="btn btn-primary">Prevention Tips</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="my-2 btn btn-primary">Frequently Asked Questions</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/103/covid-19-prevention-advice" class="my-2 btn btn-primary">Prevention Tips</a>
                     </p>
                 `,
                 'fr': `
                     <p>Veuillez vous surveiller attentivement et si vous avez des difficultés à respirer, veuillez appeler le numéro approprié</p>
-                    <p>
-                        Pour le Nigeria: 08000CORONA 08023169485, 08033565529, 08052817243
+                    <p> 
+                        Pour le Nigeria : 08000CORONA, 08023169485, 08033565529, 08052817243
                     </p>
-                    <p>
-                        Pour le Ghana: +233 55 843 9868 / +233 50 949 7700
+                    <p> 
+                        Pour le Ghana : +233 55 843 9868/ + 233 50 949 7700
                     </p>
-                    <p>
-                        Pour le Kenya: 0729 471414 and 0732 353535
+                    <p> 
+                        Pour le Kenya : 0729 471414 et 0732 353535
                     </p>
-                    <p>
-                        Pour la Gambie: 1025
+                    <p> 
+                        Pour la Gambie : 1025
                     </p>
-                    <p>
-                        Pour le Cameroun: 1510
+                    <p> 
+                        Pour le Cameroun : 1510
+                    </p>
+                    <p> 
+                        Pour le Carbo Verde: +238 800 1112
+                    </p>
+                    <p> 
+                        Pour le Burkina Faso +226 160 8989 / +226 521 95394
+                    </p>
+                    <p> 
+                        Pour le Benin: +229 953 61102 / +229 953 61102
+                    </p>
+                    <p> 
+                        Pour le Cote d'ivoire: 114 / 143 / 101
+                    </p>
+                    <p> 
+                        Pour le Mali: 30601
+                    </p>
+                    <p> 
+                        Pour le Senegal: +221 800005050
+                    </p>
+                    <p> 
+                        Pour le Sierra Leone: 117
+                    </p>
+                    <p> 
+                        Pour le Togo: +228 22222073 / +228 91674242
+                    </p>
+                    <p> 
+                        Pour le Guinea: +224 629995656
+                    </p>
+                    <p> 
+                        Pour le Guine-Bissau: 1919 (MTN) / 2020 (orange) / +245 966050002 (COES)
                     </p>
 
                     <p>Vous pouvez entrer en contact et discuter avec un médecin sur <a href="https://app.wellvis.org/#/chat/find" target="_blank" rel="noopener noreferrer"><b>Wellvis</b></a></p>
                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="btn btn-primary">Frequently Asked Questions</a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/105/conseils-de-prevention" class="btn btn-primary">Conseils de prevention</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="my-2 btn btn-primary">Frequently Asked Questions</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/105/conseils-de-prevention" class="my-2 btn btn-primary">Conseils de prevention</a>
                     </p>
                 `
             },
@@ -147,11 +217,11 @@ export default class Results extends Component {
             image: highRisk,
             title: {
                 'en': "The risk of you having COVID-19 is high.",
-                'fr': "The risk of you having COVID-19 is high."
+                'fr': "Le risque que vous ayez COVID-19 est élevé."
             },
             grade: {
                 'en': "High risk",
-                'fr': "High risk"
+                'fr': "Risque élevé"
             },
             description: {
                 'en': `
@@ -162,25 +232,62 @@ export default class Results extends Component {
                         <li>Call the following Numbers and you will be told what to do next:</li>
                     </ul>
                     <p>
-                        For Nigeria: 08000CORONA 08023169485, 08033565529, 08052817243
+                        Nigeria: 0800 970000 10    
                     </p>
                     <p>
-                        For Ghana: +233 55 843 9868 / +233 50 949 7700
+                        Lagos:  08023169485, 08033565529, 08052817243
                     </p>
                     <p>
-                        For Kenya: 0729 471414 and 0732 353535
+                        Ghana: +233 55 843 9868 / +233 50 949 7700
                     </p>
                     <p>
-                        For Gambia: 1025
+                        Kenya: 0729 471414 and 0732 353535.
                     </p>
                     <p>
-                        For Cameroon: 1510
+                        Gambia: 1025
                     </p>
+                    <p>
+                        Cameroon: 1510
+                    </p>
+                    <p>
+                        Carbo Verde: +238 800 1112
+                    </p>
+                    <p>
+                        Burkina Faso +226 160 8989 / +226 521 95394
+                    </p>
+                    <p>
+                        Benin: +229 953 61102 / +229 953 61102
+                    </p>
+                    <p>
+                        Cote d'ivoire: 114 / 143 / 101
+                    </p>
+                    <p>
+                        Mali: 30601
+                    </p>
+                    <p>
+                        Senegal: +221 800005050
+                    </p>
+                    <p>
+                        Sierra Leone: 117
+                    </p>
+                    <p>
+                        Togo: +228 22222073 / +228 91674242
+                    </p>
+                    <p>
+                        Guinea: +224 629995656
+                    </p>
+                    <p>
+                        Guine-Bissau: 1919 (MTN) / 2020 (orange) / +245 966050002 (COES)
+                    </p>
+                    
+                   <p>
+                        <b>Please note</b> that a sudden loss of your sense of smell or taste could be a sign that you are carrying the #COVIDー19 virus.
+                   </p>
 
                     <p>You can get in touch and chat with a doctor on Wellvis by clicking <a href="https://app.wellvis.org/#/chat/find" target="_blank" rel="noopener noreferrer">here</a></p>
                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="btn btn-primary">Frequently Asked Questions</a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/103/covid-19-prevention-advice" class="btn btn-primary">Prevention Tips</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="my-2 btn btn-primary">Frequently Asked Questions</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/103/covid-19-prevention-advice" class="my-2 btn btn-primary">Prevention Tips</a>
                     </p>
                 `,
                 'fr': `
@@ -190,26 +297,56 @@ export default class Results extends Component {
                         <li>Isolez-vous de la famille et des amis</li>
                         <li>Appelez les numéros de téléphone suivants et on vous dira quoi faire ensuite:</li>
                     </ul>
-                    <p>
-                        Pour le Nigeria: 08000CORONA 08023169485, 08033565529, 08052817243
+                    <p> 
+                        Pour le Nigeria : 08000CORONA, 08023169485, 08033565529, 08052817243
                     </p>
-                    <p>
-                        Pour le Ghana: +233 55 843 9868 / +233 50 949 7700
+                    <p> 
+                        Pour le Ghana : +233 55 843 9868/ + 233 50 949 7700
                     </p>
-                    <p>
-                        Pour le Kenya: 0729 471414 and 0732 353535
+                    <p> 
+                        Pour le Kenya : 0729 471414 et 0732 353535
                     </p>
-                    <p>
-                        Pour la Gambie: 1025
+                    <p> 
+                        Pour la Gambie : 1025
                     </p>
-                    <p>
-                        Pour le Cameroun: 1510
+                    <p> 
+                        Pour le Cameroun : 1510
+                    </p>
+                    <p> 
+                        Pour le Carbo Verde: +238 800 1112
+                    </p>
+                    <p> 
+                        Pour le Burkina Faso +226 160 8989 / +226 521 95394
+                    </p>
+                    <p> 
+                        Pour le Benin: +229 953 61102 / +229 953 61102
+                    </p>
+                    <p> 
+                        Pour le Cote d'ivoire: 114 / 143 / 101
+                    </p>
+                    <p> 
+                        Pour le Mali: 30601
+                    </p>
+                    <p> 
+                        Pour le Senegal: +221 800005050
+                    </p>
+                    <p> 
+                        Pour le Sierra Leone: 117
+                    </p>
+                    <p> 
+                        Pour le Togo: +228 22222073 / +228 91674242
+                    </p>
+                    <p> 
+                        Pour le Guinea: +224 629995656
+                    </p>
+                    <p> 
+                        Pour le Guine-Bissau: 1919 (MTN) / 2020 (orange) / +245 966050002 (COES)
                     </p>
 
                     <p>Vous pouvez entrer en contact et discuter avec un médecin sur <a href="https://app.wellvis.org/#/chat/find" target="_blank" rel="noopener noreferrer">Wellvis en cliquant ici</a></p>
                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="btn btn-primary">Frequently Asked Questions</a>
-                       <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/105/conseils-de-prevention" class="btn btn-primary">Conseils de prevention</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/102/frequently-asked-questions-on-covid-19" class="my-2 btn btn-primary">Frequently Asked Questions</a>
+                       <a target="_blank" rel="noopener noreferrer" href="https://app.wellvis.org/#/articles/view/105/conseils-de-prevention" class="my-2 btn btn-primary">Conseils de prevention</a>
                     </p>
                 `
             },
@@ -220,6 +357,10 @@ export default class Results extends Component {
         shareText: {
             'en': "Take this simple test to find out your COVID-19 Risk factor",
             'fr': "Faites ce test simple pour découvrir votre facteur de risque COVID-19"
+        },
+        shareHeading: {
+            'en': "Share this tool with your friends and family",
+            'fr': "Partagez cet outil avec vos amis et votre famille"
         }
     }
 
@@ -253,6 +394,7 @@ export default class Results extends Component {
                                 dangerouslySetInnerHTML={{ __html: this.state.status.description[this.props.lang] }} 
                             >
                             </div>
+                            <h3>{this.content.shareHeading[this.props.lang]}</h3>
                             <SocialShare 
                                 text={this.content.shareText[this.props.lang]}
                                 url={ window.location.href }

@@ -3,7 +3,6 @@ import React from 'react'
 export default function SocialShare(props) {
     return (
         <div className="col-sm-12 share-btns px-0 my-3">
-            <h3>Share this tool with your friends and family</h3>
             <a
                 href={"https://www.facebook.com/sharer/sharer.php?u=" + props.url + "&quote=" + encodeURI(props.text) + " #" + props.tag + ""}
                 className="social mb-2 facebook btn"

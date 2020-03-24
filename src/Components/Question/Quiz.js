@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Question from './Question'
 import Option from './Option'
 import Results from '../Results/Results';
+import SelectLanguageModal from '../SelectLanguageModal/SelectLanguageModal';
 import Loading from '../Loading/Loading';
 
 export default class Quiz extends Component {
@@ -16,6 +17,7 @@ export default class Quiz extends Component {
       score: 0,
       selected: [],
       lang:"fr",
+      showSelectLanguageModal: true,
       endQuiz: false,
       alreadyQuizzed: false,
       questionsLoaded: false,
@@ -129,6 +131,10 @@ export default class Quiz extends Component {
         .then(console.log("Saved"))
   }
 
+  selectLanguage = (lang) => {
+      this.setState({ lang, showSelectLanguageModal:false })
+  }
+
   selectOption = (question, answer) => {
     let answers = this.state.answers
     answers[question] = answer
@@ -150,6 +156,10 @@ export default class Quiz extends Component {
           'en': "This app will determine your COVID-19 risk factor and if you need to call the Disease Control Hotline or not.",
           'fr': "Cet outil évalue votre risque d'exposition à COVID 19 et si vous devez appeler la hotline de contrôle des maladies ou non"
       },
+      'disclaimer': {
+          'en': "This is a risk assessment tool, and it is not meant for diagnosis",
+          'fr': "Cet outil n'est pas pour le diagnostic, c'est juste pour l'évaluation des risques"
+      },
       'startBtn': {
           'en': "Get Started",
           'fr': "Commencer"
@@ -161,13 +171,19 @@ export default class Quiz extends Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-
+            <SelectLanguageModal
+                show={this.state.showSelectLanguageModal}
+                selectLanguage={this.selectLanguage}
+            />
             <Question show={this.isCurrentQuestion("intro")}>
               <div className="form-group text-center col-md-6 offset-md-3">
                 <h3 className="col-sm-12">{ this.content.preheader[this.state.lang] }</h3>
                 <p>
                     { this.content.intro[this.state.lang] }
                 </p>
+                <small>
+                    <b>{ this.content.disclaimer[this.state.lang] }</b>
+                </small>
               </div>
               <div className="col-12 text-center">
                 <button onClick={this.startQuiz} className="btn btn-secondary waves-effect waves-light">
